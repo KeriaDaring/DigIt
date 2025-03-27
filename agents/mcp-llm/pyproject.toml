@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "mcp_llm"
+version = "0.0.1"
+authors = [
+    "Keria"
+]
+description = "A agent can connect to multi mcp server"
+license = "MIT License"
+homepage = "https://github.com/moxin-org/mofa"
+documentation = "https://github.com/moxin-org/mofa/blob/main/README.md"
+readme = "README.md"
+packages = [{ include = "mcp_llm" }]
+
+[tool.poetry.dependencies]
+pyarrow = ">= 5.0.0"
+
+[tool.poetry.scripts]
+mcp_llm = "mcp_llm.main:main"
+
+[build-system]
+requires = ["poetry-core>=1.8.0"]
+build-backend = "poetry.core.masonry.api"
+

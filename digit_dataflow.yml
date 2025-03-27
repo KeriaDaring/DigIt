@@ -1,0 +1,29 @@
+nodes:
+  - id: terminal-input
+    build: pip install -e ./agents/terminal-input
+    path: dynamic
+    outputs:
+      - data
+    inputs:
+      task: mcp-llm/mcp_llm_output
+  - id: mcp-llm
+    build: pip install -e ./agents/mcp-llm
+    path: mcp_llm
+    outputs:
+      - mcp_llm_output
+    inputs:
+      task: terminal-input/data
+    env:
+      WRITE_LOG: true
+  # - id: beauty-context
+  #   operator:
+  #     python: scripts/beauty-context.py
+  #     outputs:
+  #       - beauty_context_output
+  #     inputs:
+  #       task: mcp-llm/mcp_llm_output
+  #     env:
+  #       IS_DATAFLOW_END: true
+  #       WRITE_LOG: true
+  
+ 

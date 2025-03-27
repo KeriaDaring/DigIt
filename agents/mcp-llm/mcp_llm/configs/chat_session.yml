@@ -1,0 +1,30 @@
+AGENT:
+  ROLE: tool_json_generator
+  BACKSTORY: null
+  TASK: null
+
+WEB:
+  WEB_ENABLE: false
+  SERPER_API_KEY:
+  SEARCH_NUM: 20
+  SEARCH_ENGINE_TIMEOUT: 5
+
+MODEL:
+  MODEL_API_KEY: 
+  MODEL_NAME: deepseek-ai/DeepSeek-V2.5
+  MODEL_MAX_TOKENS: 30000
+  MODEL_API_URL: https://api.siliconflow.cn/v1
+#  MODEL_API_KEY: 
+#  MODEL_NAME: gpt-4o-mini
+#  MODEL_MAX_TOKENS: 2048
+
+ENV:
+  PROXY_URL: null
+  AGENT_TYPE: reasoner
+
+LOG:
+  LOG_PATH: ./data/output/log/log.md
+  LOG_TYPE: markdown
+  LOG_STEP_NAME: reasoner_result
+  CHECK_LOG_PROMPT: true
+

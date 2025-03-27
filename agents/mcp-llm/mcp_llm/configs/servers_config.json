@@ -1,0 +1,13 @@
+{
+    "mcpServers": {
+        "exa": {
+            "command": "npx",
+            "args": [
+                "/Users/keria/Documents/mcp/exa-mcp-server/build/index.js"
+            ],
+            "env": {
+                "EXA_API_KEY": ""
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <div class="mermaid">
+        flowchart TB
+  beauty-context/op[beauty-context]
+  mcp-llm["**mcp-llm**"]
+  terminal-input["**terminal-input**"]
+  mcp-llm -- mcp_llm_output as task --> beauty-context/op
+  terminal-input -- data as task --> mcp-llm
+  beauty-context/op -- beauty_context_output as result --> terminal-input
+  mcp-llm -- mcp_llm_output as task --> terminal-input
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({ startOnLoad: true, securityLevel: 'loose', theme: 'base' });
+    </script>
+</body>
+
+</html>
